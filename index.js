@@ -5,7 +5,7 @@ function card (greeting,event,msg) {
     ptag.innerHTML = `${greeting}, Thanks for coming to our ${event}, We hope you had a lovely time, ${msg}`; 
 }
 function errmsg(){
-    ptag.innerHTML = "You need to put in a valid greeting or message"
+    ptag.innerHTML = "You need to put in a valid greeting, message and event"
 }
 
 form.addEventListener('submit', (e) => {
@@ -14,7 +14,6 @@ form.addEventListener('submit', (e) => {
     let greeting = e.target.greeting.value;
     let msg = e.target.msg.value;
     let event = e.target.event.value;
-    console.log(event)
     function getCard (res, rej){     
         if (greeting.length && msg.length && event){
             let cardCall = card(greeting,event,msg)
