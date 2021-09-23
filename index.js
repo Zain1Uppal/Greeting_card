@@ -7,14 +7,16 @@ function card (greeting,event,msg) {
 function errmsg(){
     ptag.innerHTML = "You need to put in a valid greeting or message"
 }
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const cardValid = () => new Promise(getCard);
     let greeting = e.target.greeting.value;
     let msg = e.target.msg.value;
     let event = e.target.event.value;
+    console.log(event)
     function getCard (res, rej){     
-        if (greeting.length && msg.length){
+        if (greeting.length && msg.length && event){
             let cardCall = card(greeting,event,msg)
             form.style['display'] = 'none';
             const success = "Success!"
