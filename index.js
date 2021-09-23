@@ -10,10 +10,10 @@ form.addEventListener('submit', (e) => {
     let greeting = e.target.greeting.value;
     let msg = e.target.msg.value;
     let event = e.target.event.value;
-    form.style['display'] = 'none';
     function getCard (res, rej){     
         if (greeting.length && msg.length){
             let cardCall = card(greeting,event,msg)
+            form.style['display'] = 'none';
             const success = "Success!"
             res(success)
             res(cardCall)
