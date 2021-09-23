@@ -1,0 +1,14 @@
+form > div {
+    display: flexbox;
+    flex-direction: row;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid;
+    
+}
+div > input {
+    padding: 20px 20px 20px 20px;
+    border: 1px solid;
+}
+label {
+    border: 1px;
+}
