@@ -4,6 +4,9 @@ const cardValid = () => new Promise(getCard);
 function card (greeting,event,msg) {
     ptag.innerHTML = `${greeting}, Thanks for coming to our ${event}, We hope you had a lovely time, ${msg}`; 
 }
+function errmsg(){
+    ptag.innerHTML = "You need to put in a valid greeting or message"
+}
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const cardValid = () => new Promise(getCard);
@@ -18,6 +21,7 @@ form.addEventListener('submit', (e) => {
             res(success)
             res(cardCall)
         }else{
+            errmsg()
             const err = "no valid input"
             rej(err)
         }
